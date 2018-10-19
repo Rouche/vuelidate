@@ -24,6 +24,9 @@ declare module 'vuelidate/lib/validators' {
     export interface Helpers {
         withParams(params: Params, rule: CustomRule): ValidationRule
         req(field: string): ValidationRule
+        ref(reference: any, vm: Vue, parentVm: Vue): any
+        len(value: any): number
+        regex(type: any, expr: any): boolean //Not sure about this one
     }
 
     export const helpers: Helpers
